@@ -1,6 +1,6 @@
 cabal-version:       >= 1.8
 name:                bimap
-version:             0.4.0
+version:             0.6.0
 synopsis:            Bidirectional mapping between two key types
 description:
   A data structure representing a bidirectional mapping between two
@@ -26,6 +26,7 @@ Library
   ghc-options:         -Wall
   exposed-modules:
       Data.Bimap
+      Data.Bimap.Strict
 
   if impl(ghc >= 7.8)
     other-modules:
@@ -35,6 +36,7 @@ test-suite tests
     type:            exitcode-stdio-1.0
     main-is:         Test/RunTests.hs
     other-modules:   Test.Tests
+                     Test.TestsStrict
                      Test.Util
     build-depends:   base >= 4 && < 5,
                      containers,
